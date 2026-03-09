@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ServeFlow Caixa</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<h1>ServeFlow</h1>
+
+<span>Sistema de Caixa - Restaurante</span>
+
+<button onclick="logout()" class="logout">
+Sair
+</button>
+
+</header>
+
+<div class="container">
+
+<aside class="menu">
+
+<ul>
+
+<li>Venda</li>
+<li>Comandas</li>
+<li>Mesas</li>
+<li>Cozinha</li>
+<li>Relatórios</li>
+
+</ul>
+
+</aside>
+
+<main class="produtos">
+
+<h2>Pratos</h2>
+
+<div class="grid">
+
+<div class="card" onclick="add('À Vontade',35)">
+À Vontade<br>R$35
+</div>
+
+<div class="card" onclick="add('Por Kilo',32)">
+Por Kilo<br>R$32
+</div>
+
+<div class="card" onclick="add('Parmegiana Carne',42)">
+Parmegiana Carne<br>R$42
+</div>
+
+<div class="card" onclick="add('Parmegiana Frango',38)">
+Parmegiana Frango<br>R$38
+</div>
+
+<div class="card" onclick="add('Coca Lata',6)">
+Coca Lata<br>R$6
+</div>
+
+<div class="card" onclick="add('Suco Laranja',7.5)">
+Suco Laranja<br>R$7,50
+</div>
+
+<div class="card" onclick="add('Coca 600ml',10)">
+Coca 600ml<br>R$10
+</div>
+
+<div class="card" onclick="add('Guaraná 600ml',10)">
+Guaraná 600ml<br>R$10
+</div>
+
+</div>
+
+</main>
+
+<aside class="pedido">
+
+<h3>Pedido</h3>
+
+<ul id="lista"></ul>
+
+<h2>
+Total: R$ <span id="total">0</span>
+</h2>
+
+<button class="pix">PIX</button>
+<button class="cartao">CARTÃO</button>
+<button class="dinheiro">DINHEIRO</button>
+
+<button class="finalizar">
+FINALIZAR VENDA
+</button>
+
+</aside>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+if(sessionStorage.getItem("logado") !== "true"){
+
+window.location.href="login.html"
+
+}
+
+</script>
+
+</body>
+</html>

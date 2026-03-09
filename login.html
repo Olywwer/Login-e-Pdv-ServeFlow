@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ServeFlow | Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="login-body">
+
+<main class="login-container">
+
+<header class="login-header">
+
+<h1>SISTEMA SERVEFLOW</h1>
+
+<img 
+src="img/Logo colorido ServeF.png"
+alt="Logo ServeFlow"
+class="logo"
+>
+
+</header>
+
+<form class="login-form" onsubmit="return false;">
+
+<div class="input-group">
+
+<label for="user">Usuário</label>
+
+<input
+type="text"
+id="user"
+name="user"
+placeholder="Digite seu usuário"
+required
+>
+
+</div>
+
+<div class="input-group">
+
+<label for="password">Senha</label>
+
+<input
+type="password"
+id="password"
+name="password"
+placeholder="Digite sua senha"
+onkeydown="enterLogin(event)"
+required
+>
+
+</div>
+
+<button
+type="button"
+class="login-btn"
+onclick="login()"
+>
+
+Entrar
+
+</button>
+
+</form>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
